@@ -1,2 +1,2 @@
-# CursoJS
+# Estudos Web Moderno
  
