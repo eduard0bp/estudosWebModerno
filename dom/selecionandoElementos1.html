@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Selecionar Elementos #01</title>
+    <link rel="stylesheet" href="css/estilo.css" />
+  </head>
+  <body class="conteudo exercicio">
+    <div id="primeiro">#primeiro</div>
+    <div>Segundo</div>
+    <div class="terceiro ultimo">.terceiro .ultimo</div>
+    <script>
+      // Adiciona a classe no Elemento selecionado
+      document.getElementById('primeiro').classList.add('destaque')
+
+      // Seleciona os elementos com a Tag definida
+      const divs = document.getElementsByTagName('div')
+      Array.from(divs).forEach(e => e.classList.remove('destaque'))
+
+      // Adiciona a todos os elementos Divs
+      const divsArray = [...divs]
+      divsArray.forEach(e => e.classList.add('destaque'))
+
+      // Remove a estilização dos elementos que possuiam a Class 'ultimo'
+      const ultimosElementos = document.getElementsByClassName('ultimo')
+      for (let e of ultimosElementos) {
+        e.classList.remove('destaque')
+      }
+    </script>
+  </body>
+</html>
