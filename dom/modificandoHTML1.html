@@ -8,7 +8,31 @@
 
   <body class="conteudo exercicio">
     <script>
-      // ...
+      const body = document.querySelector('body')
+
+      const div1 = document.createElement('div')
+      div1.classList.add('destaque')
+      div1.innerHTML = 'Primeiro'
+
+      const div2 = document.createElement('div')
+      div2.setAttribute('wm-atributo', 'valor')
+      div2.innerHTML = 'Segundo'
+
+      const p = document.createElement('p')
+      p.innerHTML = 'Terceiro'
+      const div3 = document.createElement('div')
+      div3.appendChild(p) // Adiciona um elemento ao elemento Pai
+
+      body.appendChild(div1) // Insere o elemento dentro do elemento escolhido
+      body.appendChild(div2)
+      body.appendChild(div3)
+
+      const texto = document.createTextNode('Antes...')
+      div3.insertBefore(texto, div3.childNodes[0]) // Insere um elemento antes da posição escolhida pelo índice
+
+      const div4 = div3.cloneNode(true) // Clona um elemento, se True será clonado todo o elemento, se false não clonará os filhos
+      body.appendChild(div4)
+      body.removeChild(div3)
     </script>
   </body>
 </html>
